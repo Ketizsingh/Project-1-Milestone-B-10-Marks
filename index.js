@@ -2,8 +2,8 @@ const express = require('express');
 const router = require('./src/routes/volunteer.route');
 const bodyParse = require('body-parser');
 var cors = require('cors')
-// const dotenv = require('dotenv');
-// dotenv.config({ path: './.env'});
+    // const dotenv = require('dotenv');
+    // dotenv.config({ path: './.env'});
 
 // console.log(loggedInUser.id); // logged in user value
 
@@ -17,9 +17,7 @@ const port = process.env.port || 5053;
 app.use(express.static('./public'));
 
 //parse request data content type application/x-www-form-rulencoded
-app.use(bodyParse.urlencoded({
-    extended: false
-}));
+app.use(bodyParse.urlencoded({ extended: false }));
 
 //parse request data content type application/x-www-form-rulencoded
 app.use(bodyParse.json());
